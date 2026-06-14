@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift 2 💌</title>
+    <link rel="stylesheet" href="letter.css">
+</head>
+<body>
+
+<div class="stars">
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+    <span>✦</span>
+    <span>✧</span>
+</div>
+
+<div class="container">
+
+    <h1>Your Second Gift 💌</h1>
+
+    <p>Something written just for you...</p>
+
+    <div class="envelope" id="envelope">
+        ✉️
+    </div>
+
+    <button onclick="openLetter()" id="openBtn">
+        Open Letter
+    </button>
+
+    <div class="letter hidden" id="letterBox">
+        <p>
+            Happy Birthday. 🎂<br><br>
+
+            I hope this year brings you happiness, peace, good memories,
+            and everything you’ve been wishing for.<br><br>
+
+            Keep smiling, keep riding, and keep being yourself.
+            That suits you the best. 😌<br><br>
+
+            Enjoy your day.
+        </p>
+    </div>
+
+    <a href="gifts.html" class="btn hidden" id="backBtn">
+        Back to Gifts 🎁
+    </a>
+
+</div>
+
+<script>
+function openLetter(){
+    document.getElementById("envelope").style.display = "none";
+    document.getElementById("openBtn").style.display = "none";
+
+    document.getElementById("letterBox").classList.remove("hidden");
+    document.getElementById("backBtn").classList.remove("hidden");
+}
+</script>
+
+</body>
+</html>
