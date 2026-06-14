@@ -7,13 +7,16 @@
 
 body{
     min-height:100vh;
+    background:linear-gradient(135deg,#ffe5ec,#fff1c1);
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#ffe5ec,#fff1c1);
-    padding:20px;
+
+    /* IMPORTANT FIX */
+    overflow-y:auto;
+    overflow-x:hidden;
     position:relative;
-    overflow:hidden;
+    padding:20px;
 }
 
 .container{
@@ -22,43 +25,55 @@ body{
     max-width:700px;
     position:relative;
     z-index:2;
+
+    /* IMPORTANT FIX */
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:20px;
+    padding-bottom:40px;
 }
 
 h1{
     color:#ff4d6d;
-    margin-bottom:20px;
     font-size:clamp(2rem,5vw,3rem);
 }
 
 .message-box{
     background:white;
-    padding:30px;
+    padding:25px;
     border-radius:20px;
     box-shadow:0 10px 25px rgba(0,0,0,0.12);
-    line-height:1.9;
+    line-height:1.8;
+    text-align:left;
+
+    /* prevents long text issues */
+    max-height:60vh;
+    overflow-y:auto;
 }
 
 .message-box p{
     color:#555;
-    font-size:1.1rem;
+    font-size:1.05rem;
 }
 
 .btn{
     display:inline-block;
-    margin-top:25px;
     padding:12px 28px;
     text-decoration:none;
     background:#ff4d6d;
     color:white;
     border-radius:30px;
     transition:0.3s;
+    margin:0 auto;
 }
 
 .btn:hover{
     transform:translateY(-3px);
 }
 
-/* Sparkles */
+/* sparkles */
 
 .stars{
     position:absolute;
@@ -67,6 +82,7 @@ h1{
     top:0;
     left:0;
     z-index:1;
+    pointer-events:none;
 }
 
 .stars span{
